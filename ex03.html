@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function init() {
+            let div = document.getElementById("div1")
+            console.log (div)
+            let name = "김개똥";
+            let age = "30";
+            let msg = `<b>저의 이름은</b> ${name} 입니다<br>
+            나이는 ${age} 입니다`;
+
+            // backtic에서의 변수는 달러에 중괄호를 쓴다.
+
+            // `` 1번 또는 ! 옆에 << backtic 여러줄을 칠 수 있는 문법 / 여러줄을 사용할때 쓰인다.
+
+            /*
+            let msg = "<b>저의 이름은</b> : "+ name +" 입니다<br>";
+                // 위에와 합산 된다. ( 결론 명령 ㄷ 명령 {이어써진다} )
+            msg = msg + "나이는 : "+ age +"살 입니다";
+            */
+            div.innerHTML = msg
+        }
+        function test(){
+            let num1 = 10;
+            let num2 = 20;
+            let sum;
+            sum = num1 + num2;
+            console.log ("sum : ", sum );
+
+            num1 = num1 + 100;
+            console.log("num1 : ", num1)
+
+            let str = "안녕";
+            console.log(str)
+
+            // "안녕" + " 하세요" = "안녕 하세요"
+            let s = str + " 하세용";
+            console.log(s)
+            str = str + " 하세요";
+            console.log (str)
+        }
+        test();
+    </script>
+
+</head>
+<body onload="init()">
+    <div id="div1"></div>
+</body>
+</html>
