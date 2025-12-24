@@ -15,7 +15,7 @@
             let msg = ( bool ) ? "되돌리기" : "변경";
 
             div.className = color
-            //btn.innerHTML = msg
+            btn.innerHTML = msg
 
             bool = !bool
         }
@@ -23,12 +23,12 @@
         function plus(){
             size += 3;
             let div = document.getElementById("div1");
-            div.style.fontsize = size+"px";
+            div.style.fontSize = size+"px";
         }
         function minus(){
             size = size - 3;
             let div = document.getElementById("div1");
-            div.style.fontsize = size+"px";
+            div.style.fontSize = size+"px";
         }
         let x = 1;
         // 1 -> 8 7 6 5 4 3 2 1 8 7
@@ -62,7 +62,7 @@
     </div>
 
     <div id="div1">div</div>
-    <button onclick="change()" id="bth">변경</button>
+    <button onclick="change()" id="btn">변경</button>
     <hr>
     <button onclick="plus()">+</button>
     <button onclick="minus()">-</button>
