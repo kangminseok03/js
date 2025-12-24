@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function btn(){
+            const txt1 = document.getElementById("txt1");
+            const txt2 = document.getElementById("txt2");
+            const div = document.getElementById("alarm");
+            console.log( "txt1 : ", txt1.value )
+            console.log( "txt2 : ", txt2.value )
+            console.log( "txt2 = txt1 : ", txt2.value == txt1.value )
+            if( txt2.value == txt1.value ){
+                div.innerHTML = div.innerHTML = "<span style=\"color: blue;\">일치 합니다!!!</span>"
+                console.log("비밀번호 일치")
+            }
+            if( txt2.value != txt1.value ){
+                div.innerHTML = "<span style=\"color: red;\">다시 입력!!!</span>"
+
+                txt1.focus();
+
+                console.log("불 일치")
+                txt2.value = ""
+                txt1.value = ""
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="txt1" placeholder="비밀번호 입력"><br>
+    <input type="text" id="txt2" placeholder="비밀번호 확인"><br>
+    <div id="alarm"></div>
+    <input type="button" onclick="btn()" value="클릭"><br>
+</body>
+</html>
